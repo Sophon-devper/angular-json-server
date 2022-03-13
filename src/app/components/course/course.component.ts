@@ -21,7 +21,6 @@ export class CourseComponent implements OnInit {
   loadData(): void {
     this.service.getCourse().subscribe((exists) => {
       this.course = exists;
-      console.log(this.course)
     });
   }
 
