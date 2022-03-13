@@ -1,0 +1,110 @@
+<div class="modal-header">
+  <h4 class="modal-title">Create new course</h4>
+  <button type="button" class="close" aria-label="Close" (click)="close()">
+    X
+  </button>
+</div>
+<div class="modal-body">
+  <form class="needs-validation" novalidate>
+    <div class="row">
+      <div>
+        <label for="course-name-field" class="form-label">Course name</label>
+        <input
+          type="text"
+          name="course-name"
+          class="form-control"
+          [(ngModel)]="course.name"
+          autocomplete="none"
+          id="course-name-field"
+          required
+        />
+        <div class="invalid-feedback">Please enter your course name.</div>
+      </div>
+      <div>
+        <label for="description-field" class="form-label">Description</label>
+        <textarea
+          type="text"
+          name="description"
+          class="form-control"
+          [(ngModel)]="course.description"
+          id="description-field"
+          rows="2"
+        ></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="subject-field" class="form-label">Subject</label>
+        <input
+          type="text"
+          name="subject"
+          class="form-control"
+          [(ngModel)]="course.subject"
+          id="subject-field-field"
+          required
+        />
+        <div class="invalid-feedback">Please enter course subject.</div>
+      </div>
+      <div class="col">
+        <label for="category-field" class="form-label">Category</label>
+        <input
+          type="text"
+          name="category"
+          class="form-control"
+          [(ngModel)]="course.category"
+          id="category-field"
+          required
+        />
+        <div class="invalid-feedback">Please enter course category.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="start-date-field" class="form-label">Start-date</label>
+        <input
+          type="date"
+          name="start-date"
+          class="form-control"
+          [(ngModel)]="course.start"
+          id="start-date-field"
+          required
+        />
+        <div class="invalid-feedback">Please choose start date.</div>
+      </div>
+      <div class="col">
+        <label for="end-date-field" class="form-label">End-date</label>
+        <input
+          type="date"
+          name="end-date"
+          class="form-control"
+          [(ngModel)]="course.end"
+          id="end-date-field"
+          required
+        />
+        <div class="invalid-feedback">Please choose end date.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label for="amount-field" class="form-label">Student amuont</label>
+        <input
+          type="number"
+          name="amount"
+          min="1"
+          max="100"
+          class="form-control"
+          [(ngModel)]="course.amount"
+          id="amount-field"
+          required
+        />
+        <div class="invalid-feedback">Please put your student amuont.</div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="submit" class="btn btn-primary" (click)="create($event)">
+    Apply
+  </button>
+  <button type="button" class="btn btn-second" (click)="close()">Cancel</button>
+</div>

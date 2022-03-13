@@ -1,0 +1,27 @@
+.course-page {
+    padding: 100px;
+
+    .header {
+        padding: 20px 0;
+
+        .title {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .btn {
+            float: right;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+    }
+
+    .card {
+        margin: 10px 0;
+
+        .no-display-text {
+            text-align: center;
+        }
+
+    }
+}

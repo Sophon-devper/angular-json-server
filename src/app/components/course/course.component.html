@@ -1,0 +1,25 @@
+<div class="course-page">
+  <div class="container-fluid">
+    <div class="header">
+      <h1 class="title">Course list</h1>
+      <button type="button" class="btn btn-primary" (click)="create()">
+        Create
+      </button>
+    </div>
+    <div class="card" *ngFor="let item of course">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ item.category }}</h6>
+        <p class="card-text">{{ item.description }}</p>
+        <button type="button" class="btn btn-danger" (click)="delete(item)">
+          Delete
+        </button>
+      </div>
+    </div>
+    <div class="card" *ngIf="course.length == 0">
+      <div class="card-body">
+        <p class="card-text no-display-text">No course to display. If your are instructor. Please create course.</p>
+      </div>
+    </div>
+  </div>
+</div>
